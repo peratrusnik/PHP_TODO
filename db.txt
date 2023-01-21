@@ -1,0 +1,15 @@
+CREATE TABLE `todo` (
+  `id` int(11) NOT NULL,
+  `level` int(1) NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `created_for` varchar(255) NOT NULL,
+  `done` int(1) NOT NULL DEFAULT 0,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `msg` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+INSERT INTO `todo` (`id`, `level`, `created_by`, `created_for`, `done`, `created_at`, `msg`) VALUES
+(20, 3, 'Danilo', 'Pera', 0, '2023-01-21 17:36:29', 'nauci JS'),
+(21, 2, 'Pera', 'Danilo', 0, '2023-01-21 17:36:51', 'OK'),
+(22, 1, 'Danilo', 'Dejan', 0, '2023-01-21 17:37:19', 'Moze to bolje!');
